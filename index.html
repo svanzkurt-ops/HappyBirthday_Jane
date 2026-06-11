@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday! 🎉</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Opening Animation Screen -->
+    <div id="opening" class="opening-screen">
+        <div class="birthday-container">
+            <h1 class="birthday-text">Happy Birthday! 🎉</h1>
+            <div class="confetti">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <button class="start-button" onclick="startExperience()">Click to Continue</button>
+        </div>
+    </div>
+
+    <!-- Main Notes Screen -->
+    <div id="notes-screen" class="notes-screen hidden">
+        <div class="background-decoration">
+            <div class="bubble bubble-1"></div>
+            <div class="bubble bubble-2"></div>
+            <div class="bubble bubble-3"></div>
+            <div class="bubble bubble-4"></div>
+        </div>
+
+        <!-- Scattered Notes -->
+        <div class="notes-container">
+            <!-- Note 1 - Top Left -->
+            <div class="note note-1" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">💭 First Thought</p>
+                    <p class="note-text">I remember the first time we met...</p>
+                </div>
+            </div>
+
+            <!-- Note 2 - Top Right -->
+            <div class="note note-2" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">😄 Your Smile</p>
+                    <p class="note-text">That laugh of yours is contagious...</p>
+                </div>
+            </div>
+
+            <!-- Note 3 - Middle Left -->
+            <div class="note note-3" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">✨ Special Moments</p>
+                    <p class="note-text">Every moment with you feels special...</p>
+                </div>
+            </div>
+
+            <!-- Note 4 - Middle Center -->
+            <div class="note note-4" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">❤️ In My Heart</p>
+                    <p class="note-text">You mean so much to me...</p>
+                </div>
+            </div>
+
+            <!-- Note 5 - Middle Right -->
+            <div class="note note-5" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">🌟 Qualities</p>
+                    <p class="note-text">Your kindness and beauty shine bright...</p>
+                </div>
+            </div>
+
+            <!-- Note 6 - Bottom Left -->
+            <div class="note note-6" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">🎁 My Wish</p>
+                    <p class="note-text">This year, I hope all your dreams come true...</p>
+                </div>
+            </div>
+
+            <!-- Note 7 - Bottom Right -->
+            <div class="note note-7" onclick="openNote(this)">
+                <div class="note-content">
+                    <p class="note-title">💝 For You</p>
+                    <p class="note-text">Have the most amazing birthday ever!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Close Instructions -->
+        <div class="instruction">Click on the scattered notes to read your birthday messages 💌</div>
+    </div>
+
+    <!-- Modal for Reading Notes -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalText"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -69,6 +69,11 @@ function startExperience() {
     });
 }
 
+// Flip note to reveal message
+function flipNote(element) {
+    element.classList.toggle('flipped');
+}
+
 // Open note modal
 function openNote(element) {
     const modal = document.getElementById('noteModal');

@@ -31,103 +31,78 @@
         <!-- Scattered Notes -->
         <div class="notes-container">
             <!-- Note 1 - Top Left -->
-            <div class="note note-1" onclick="flipNote(this)">
+            <div class="note note-1" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">💭</div>
                         <div class="note-label">First Thought</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        Happy Birthday, Jane. 💖 
-                        You are one of the greatest blessings in my life. Through every challenge and every happy moment, your presence has meant so much to me. I pray that this new chapter of your life is filled with peace, growth, love, and endless reasons to smile. You deserve nothing but the best.
-                    </div>
                 </div>
             </div>
 
             <!-- Note 2 - Top Right -->
-            <div class="note note-2" onclick="flipNote(this)">
+            <div class="note note-2" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">🎂</div>
                         <div class="note-label">Your Day</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        Happy Birthday, Jane! 🎂🎈
-                        Today's mission is simple: eat cake, smile a lot, take lots of pictures, and enjoy every second. You officially have permission to be spoiled all day long. Have the best birthday ever!
-                    </div>
                 </div>
             </div>
 
             <!-- Note 3 - Middle Left -->
-            <div class="note note-3" onclick="flipNote(this)">
+            <div class="note note-3" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">🏛️</div>
                         <div class="note-label">Special Archi</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        Happy Birthday, Architect Jane! 🏛️✨
-                        May this year bring you exciting opportunities, successful projects, and achievements in your studies and career. Keep building your dreams—you are capable of amazing things.
-                    </div>
                 </div>
             </div>
 
             <!-- Note 4 - Middle Center -->
-            <div class="note note-4" onclick="flipNote(this)">
+            <div class="note note-4" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">❤️</div>
                         <div class="note-label">In My Heart</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        You mean so much to me. You've become such an important part of my life, and I'm grateful for every second we spend together. You inspire me to be a better person, to dream bigger, and to love deeper. My heart smiles when I think of you.
-                    </div>
                 </div>
             </div>
 
             <!-- Note 5 - Middle Right -->
-            <div class="note note-5" onclick="flipNote(this)">
+            <div class="note note-5" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">🌟</div>
                         <div class="note-label">Your Qualities</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        Your kindness and beauty shine so bright. But what I admire most is your character—your compassion, your strength, your authenticity. You never compromise who you are to please others. You're genuine, real, and absolutely wonderful. The world is better because you're in it.
-                    </div>
                 </div>
             </div>
 
             <!-- Note 6 - Bottom Left -->
-            <div class="note note-6" onclick="flipNote(this)">
+            <div class="note note-6" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">🎁</div>
                         <div class="note-label">My Wish</div>
                         <div class="note-click-text">Click to reveal</div>
                     </div>
-                    <div class="note-back">
-                        On your special day, I wish for all your dreams to come true. May this year bring you endless joy, new adventures, and all the success you deserve. I hope you take a moment to celebrate how amazing you truly are. You deserve the entire world and so much more.
-                    </div>
                 </div>
             </div>
 
             <!-- Note 7 - Bottom Right -->
-            <div class="note note-7" onclick="flipNote(this)">
+            <div class="note note-7" onclick="openNote(this)">
                 <div class="note-inner">
                     <div class="note-front">
                         <div class="note-emoji">💝</div>
                         <div class="note-label">For You</div>
                         <div class="note-click-text">Click to reveal</div>
-                    </div>
-                    <div class="note-back">
-                        Happy Birthday, Jane! 🎉
-                        May your day be filled with happiness, laughter, and all the things you love. Thank you for being such an amazing person. Wishing you success, good health, and countless beautiful memories ahead.
                     </div>
                 </div>
             </div>
@@ -135,6 +110,14 @@
 
         <!-- Close Instructions -->
         <div class="instruction">Click on the scattered notes to reveal your birthday messages 💌</div>
+    </div>
+
+    <!-- Modal for displaying full message -->
+    <div id="noteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalText"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -7,17 +7,14 @@ const noteData = [
         Every moment since then has been a blessing.`
     },
     {
-        title: "😄 Your Smile",
-        message: `That smile of yours has the power to brighten even my darkest days. 
-        Your laugh is contagious, and I find myself smiling just thinking about it. 
-        You have this incredible ability to make everyone around you feel comfortable and happy. 
-        Thank you for that gift.`
+        title: "🎂 Your Day",
+        message: `Happy Birthday, Jane! 🎂🎈
+        Today's mission is simple: eat cake, smile a lot, take lots of pictures, and enjoy every second. You officially have permission to be spoiled all day long. Have the best birthday ever!`
     },
     {
-        title: "✨ Special Moments",
-        message: `Every moment with you feels special. Whether we're doing something big or just spending quiet time together, 
-        there's a magic to it. You make ordinary days extraordinary. 
-        I treasure every single memory we've created together and can't wait to make more.`
+        title: "🏛️ Special Architect Jane",
+        message: `Happy Birthday, Architect Jane! 🏛️✨
+        May this year bring you exciting opportunities, successful projects, and achievements in your studies and career. Keep building your dreams—you are capable of amazing things!`
     },
     {
         title: "❤️ In My Heart",
@@ -59,22 +56,17 @@ function startExperience() {
     const notes = document.querySelectorAll('.note');
     notes.forEach((note, index) => {
         note.style.opacity = '0';
-        note.style.transform = note.style.transform + ' scale(0)';
+        note.style.transform = 'scale(0)';
         
         setTimeout(() => {
             note.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
             note.style.opacity = '1';
-            note.style.transform = note.style.transform.replace('scale(0)', 'scale(1)');
+            note.style.transform = 'scale(1)';
         }, index * 150);
     });
 }
 
-// Flip note to reveal message
-function flipNote(element) {
-    element.classList.toggle('flipped');
-}
-
-// Open note modal
+// Open note modal with full message
 function openNote(element) {
     const modal = document.getElementById('noteModal');
     const modalText = document.getElementById('modalText');

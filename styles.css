@@ -354,6 +354,8 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     animation: fadeIn 0.3s ease;
+    justify-content: center;
+    align-items: center;
 }
 
 .modal.show {
@@ -402,6 +404,8 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s ease;
+    line-height: 20px;
+    margin-top: -10px;
 }
 
 .close:hover,
@@ -413,12 +417,19 @@ body {
     font-size: 1.1rem;
     color: #333;
     line-height: 1.8;
+    clear: both;
 }
 
 #modalText h2 {
     color: #ec4899;
     margin-bottom: 20px;
     margin-top: 0;
+    font-size: 1.5rem;
+}
+
+#modalText p {
+    white-space: pre-wrap;
+    word-break: break-word;
 }
 
 /* Responsive Design */
@@ -443,6 +454,11 @@ body {
     .modal-content {
         padding: 30px;
         width: 95%;
+        max-height: 80vh;
+    }
+
+    #modalText {
+        font-size: 0.95rem;
     }
 
     .instruction {
